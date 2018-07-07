@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_white"
+    tools:context=".Profile.ProfileEditActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1.5">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_below="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_user_demo" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fltPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="106dp"
+                android:clickable="true"
+                android:padding="4dp"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/nunito_sans_semibold"
+            android:textSize="14sp" />
+
+        <ViewFlipper
+            android:id="@+id/view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/EtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:inputType="textEmailAddress"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="25sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <EditText
+                android:id="@+id/EtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/EtCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="25sp" />
+
+
+            <EditText
+                android:id="@+id/EtState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:inputType="textPersonName"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="25sp" />
+
+
+        </ViewFlipper>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_back" />
+
+
+
+            <ImageView
+                android:id="@+id/imgNext"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:accessibilityLiveRegion="none"
+                app:srcCompat="@drawable/ic_next_arrow"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
